@@ -1,7 +1,12 @@
 <script setup lang="ts">
 import { RouterLink, RouterView } from 'vue-router'
-import HelloWorld from './components/HelloWorld.vue'
-import data from "./options/index"
+import GraphG6 from './components/GraphG6.vue'
+
+const props = defineProps({
+  data: Array
+})
+
+const emit = defineEmits();
 
 </script>
 
@@ -12,16 +17,6 @@ import data from "./options/index"
       <h1>Vue Case </h1>
       <h2>Task: G6 Large graph exploration</h2>
       <h3>Submitted By: Md. Ratan Howlader</h3>
-    </div>
-    
-    <div class="wrapper">
-      <!-- <Title msg="Vue Case Study" /> -->
-      <graph-g-6 :data="data"></graph-g-6>
-      <!-- <nav> -->
-        <!-- <RouterLink to="/">Home</RouterLink> -->
-        <!-- <RouterLink to="/about">About</RouterLink> -->
-        <!-- <RouterLink to="/graph-g6">Graph G6</RouterLink> -->
-      <!-- </nav> -->
     </div>
   </header>
 
